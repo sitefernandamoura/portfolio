@@ -19,6 +19,8 @@
       background: var(--bg);
       color: var(--text);
       min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
     header {
       text-align: center;
@@ -39,6 +41,7 @@
       padding: 2rem;
       max-width: 1200px;
       margin: 0 auto;
+      flex: 1;
     }
     .card {
       background: var(--card);
@@ -46,7 +49,7 @@
       box-shadow: var(--shadow);
       padding: 1rem;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
       transition: transform 0.15s;
     }
@@ -58,16 +61,8 @@
       max-width: 95%;
       max-height: 180px;
       border-radius: 10px;
-      margin-bottom: 1rem;
       box-shadow: 0 1px 8px rgba(0,0,0,0.12);
       background: #fff;
-    }
-    .card .filename {
-      font-family: 'Roboto', Arial, sans-serif;
-      font-size: 1.07rem;
-      color: #b5e7f6;
-      margin-bottom: 0.3rem;
-      word-break: break-all;
     }
     @media (max-width: 600px) {
       header h1 { font-size: 1.5rem; }
@@ -76,7 +71,7 @@
     footer {
       text-align: center;
       color: #b5e7f6;
-      padding: 1.5rem 0 0.5rem 0;
+      padding: 1.5rem 0 1rem 0;
       font-size: 1rem;
     }
     footer a {
@@ -86,6 +81,22 @@
     }
     footer a:hover {
       text-decoration: underline;
+    }
+    .whatsapp-btn {
+      display: inline-block;
+      margin-top: 0.8rem;
+      padding: 0.7rem 1.5rem;
+      background: #25D366;
+      color: #fff;
+      border-radius: 25px;
+      font-size: 1rem;
+      font-weight: 500;
+      text-decoration: none;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+      transition: background 0.3s;
+    }
+    .whatsapp-btn:hover {
+      background: #1ebe5c;
     }
   </style>
 </head>
@@ -97,53 +108,44 @@
     <section class="cards">
       <div class="card">
         <img src="Slide2.PNG" alt="Slide2">
-        <div class="filename">Slide2.PNG</div>
       </div>
       <div class="card">
         <img src="Slide3.PNG" alt="Slide3">
-        <div class="filename">Slide3.PNG</div>
       </div>
       <div class="card">
         <img src="Slide4.PNG" alt="Slide4">
-        <div class="filename">Slide4.PNG</div>
       </div>
       <div class="card">
         <img src="Slide5.PNG" alt="Slide5">
-        <div class="filename">Slide5.PNG</div>
       </div>
       <div class="card">
         <img src="Slide6.PNG" alt="Slide6">
-        <div class="filename">Slide6.PNG</div>
       </div>
       <div class="card">
         <img src="Slide7.PNG" alt="Slide7">
-        <div class="filename">Slide7.PNG</div>
       </div>
       <div class="card">
         <img src="Slide8.PNG" alt="Slide8">
-        <div class="filename">Slide8.PNG</div>
       </div>
       <div class="card">
         <img src="Slide9.PNG" alt="Slide9">
-        <div class="filename">Slide9.PNG</div>
       </div>
       <div class="card">
         <img src="Slide10.PNG" alt="Slide10">
-        <div class="filename">Slide10.PNG</div>
       </div>
       <div class="card">
         <img src="Slide11.PNG" alt="Slide11">
-        <div class="filename">Slide11.PNG</div>
       </div>
       <div class="card">
         <img src="Slide12.PNG" alt="Slide12">
-        <div class="filename">Slide12.PNG</div>
       </div>
     </section>
   </main>
   <footer>
     © 2025 - Fernanda Moura |
     <a href="https://www.linkedin.com/in/fernandamouracoelho" target="_blank">LinkedIn</a>
+    <br>
+    <a class="whatsapp-btn" href="https://wa.me/5511983522703" target="_blank">💬 Fale comigo no WhatsApp</a>
   </footer>
 </body>
 </html>
