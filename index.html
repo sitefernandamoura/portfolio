@@ -1,137 +1,38 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio - Fernanda Moura</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #23272e;
-      --card: #2e3340;
-      --text: #fff;
-      --accent: #00d8ff;
-      --shadow: 0 2px 12px rgba(0,0,0,0.18);
-    }
-    body {
-      margin: 0;
-      font-family: 'Roboto', Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      min-height: 100vh;
-    }
-    header {
-      text-align: center;
-      padding: 2rem 1rem 0.5rem 1rem;
-    }
-    header h1 {
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-size: 2.5rem;
-      color: var(--accent);
-      margin-bottom: 0.4rem;
-      font-weight: 700;
-      letter-spacing: 0.03em;
-    }
-    header p {
-      font-size: 1.1rem;
-      color: #d2f0f7;
-      margin-bottom: 0.8rem;
-    }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
-      padding: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .card {
-      background: var(--card);
-      border-radius: 14px;
-      box-shadow: var(--shadow);
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      transition: transform 0.15s;
-    }
-    .card:hover {
-      transform: translateY(-5px) scale(1.03);
-      box-shadow: 0 4px 20px rgba(0,216,255,0.22);
-    }
-    .card img {
-      max-width: 95%;
-      max-height: 180px;
-      border-radius: 10px;
-      margin-bottom: 1rem;
-      box-shadow: 0 1px 8px rgba(0,0,0,0.12);
-      background: #fff;
-    }
-    .card .filename {
-      font-family: 'Roboto', Arial, sans-serif;
-      font-size: 1.07rem;
-      color: #b5e7f6;
-      margin-bottom: 0.3rem;
-      word-break: break-all;
-    }
-    @media (max-width: 600px) {
-      header h1 { font-size: 1.5rem; }
-      .cards { padding: 1rem; gap: 1rem; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Fernanda Moura - Portfólio</h1>
-    <p>Confira meus dashboards e slides publicados.</p>
-  </header>
-  <main>
-    <section class="cards">
-      <div class="card">
-        <img src="Slide2.PNG" alt="Slide2">
-        <div class="filename">Slide2.PNG</div>
-      </div>
-      <div class="card">
-        <img src="Slide3.PNG" alt="Slide3">
-        <div class="filename">Slide3.PNG</div>
-      </div>
-      <div class="card">
-        <img src="Slide4.PNG" alt="Slide4">
-        <div class="filename">Slide4.PNG</div>
-      </div>
-      <div class="card">
-        <img src="Slide5.PNG" alt="Slide5">
-        <div class="filename">Slide5.PNG</div>
-      </div>
-      <div class="card">
-        <img src="Slide6.PNG" alt="Slide6">
-        <div class="filename">Slide6.PNG</div>
-      </div>
-      <div class="card">
-        <img src="Slide7.PNG" alt="Slide7">
-        <div class="filename">Slide7.PNG</div>
-      </div>
-      <div class="card">
-        <img src="Slide8.PNG" alt="Slide8">
-        <div class="filename">Slide8.PNG</div>
-      </div>
-      <div class="card">
-        <img src="Slide9.PNG" alt="Slide9">
-        <div class="filename">Slide9.PNG</div>
-      </div>
-      <div class="card">
-        <img src="Slide10.PNG" alt="Slide10">
-        <div class="filename">Slide10.PNG</div>
-      </div>
-      <div class="card">
-        <img src="Slide11.PNG" alt="Slide11">
-        <div class="filename">Slide11.PNG</div>
-      </div>
-      <div class="card">
-        <img src="Slide12.PNG" alt="Slide12">
-        <div class="filename">Slide12.PNG</div>
-      </div>
-    </section>
-  </main>
+    <header>
+        <div class="hero">
+            <img src="Foto Pessoal.jpeg" alt="Foto Pessoal" class="profile-image">
+            <h1>Bem-vindo ao Meu Portfólio</h1>
+            <p>Olá! Eu sou [Seu Nome], um [sua profissão] apaixonado por [sua paixão].</p>
+        </div>
+    </header>
+    <main>
+        <section class="slides">
+            <h2>Projetos Recentes</h2>
+            <div class="card">
+                <h3>Projeto 1</h3>
+                <p>Descrição do projeto 1...</p>
+            </div>
+            <div class="card">
+                <h3>Projeto 2</h3>
+                <p>Descrição do projeto 2...</p>
+            </div>
+            <div class="card">
+                <h3>Projeto 3</h3>
+                <p>Descrição do projeto 3...</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2023 Meu Portfólio. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
