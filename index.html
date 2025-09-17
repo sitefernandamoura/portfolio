@@ -13,6 +13,7 @@
       --accent: #00d8ff;
       --shadow: 0 2px 12px rgba(0,0,0,0.18);
     }
+
     body {
       margin: 0;
       font-family: 'Roboto', Arial, sans-serif;
@@ -22,12 +23,55 @@
       display: flex;
       flex-direction: column;
     }
+
+    /* Menu fixo */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: var(--card);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 2rem;
+      box-shadow: var(--shadow);
+      z-index: 1000;
+    }
+
+    nav img {
+      width: 50px; /* tamanho ideal da foto */
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 1rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      gap: 2rem;
+    }
+
+    nav ul li a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: var(--accent);
+    }
+
     header {
       text-align: center;
-      padding: 2rem 1rem 1rem 1rem;
+      padding: 8rem 1rem 1rem 1rem; /* espaço extra para o menu fixo */
       max-width: 900px;
       margin: 0 auto;
     }
+
     header h1 {
       font-family: 'Montserrat', Arial, sans-serif;
       font-size: 2.5rem;
@@ -36,12 +80,14 @@
       font-weight: 700;
       letter-spacing: 0.03em;
     }
+
     header p {
       font-size: 1.1rem;
       line-height: 1.6;
       color: #dce3eb;
       margin: 0.5rem 0;
     }
+
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -51,6 +97,7 @@
       margin: 0 auto;
       flex: 1;
     }
+
     .card {
       background: var(--card);
       border-radius: 14px;
@@ -61,10 +108,12 @@
       align-items: center;
       transition: transform 0.15s;
     }
+
     .card:hover {
       transform: translateY(-5px) scale(1.03);
       box-shadow: 0 4px 20px rgba(0,216,255,0.22);
     }
+
     .card img {
       max-width: 95%;
       max-height: 180px;
@@ -72,25 +121,32 @@
       box-shadow: 0 1px 8px rgba(0,0,0,0.12);
       background: #fff;
     }
+
     @media (max-width: 600px) {
       header h1 { font-size: 1.5rem; }
       header p { font-size: 1rem; }
       .cards { padding: 1rem; gap: 1rem; }
+      nav { flex-direction: column; gap: 0.5rem; }
+      nav ul { flex-direction: column; gap: 0.5rem; }
     }
+
     footer {
       text-align: center;
       color: #b5e7f6;
       padding: 1.5rem 0 1rem 0;
       font-size: 1rem;
     }
+
     footer a {
       color: #00d8ff;
       text-decoration: none;
       margin-left: 0.5em;
     }
+
     footer a:hover {
       text-decoration: underline;
     }
+
     .whatsapp-btn {
       display: inline-block;
       margin-top: 0.8rem;
@@ -104,58 +160,55 @@
       box-shadow: 0 3px 10px rgba(0,0,0,0.25);
       transition: background 0.3s;
     }
+
     .whatsapp-btn:hover {
       background: #1ebe5c;
     }
   </style>
 </head>
 <body>
-  <header>
+  <!-- Menu fixo -->
+  <nav>
+    <div style="display:flex; align-items:center;">
+      <img src="Foto Pessoal.jpeg" alt="Foto Fernanda Moura">
+      <span style="font-weight:700; color:var(--accent)">Fernanda Moura</span>
+    </div>
+    <ul>
+      <li><a href="#sobre">Sobre mim</a></li>
+      <li><a href="#portfolio">Portfólio</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header id="sobre">
     <h1>Fernanda Moura - Portfólio</h1>
-    <p>Sou Fernanda Moura, casada e mãe de trigêmeos, papéis que me ensinaram sobre disciplina, organização e resiliência em um nível que só a vida real proporciona.</p>
+    <p>Sou Fernanda Moura, casada e mãe de trigêmeos! Um papel que me ensinou sobre disciplina, organização e resiliência em um nível que só a vida real proporciona.</p>
     <p>Tenho verdadeira paixão por Excel e análise de dados, e transformo essa energia na criação de dashboards automatizados com design clean, moderno e funcional.</p>
     <p>Minha missão é dar vida aos números, tornando-os claros, ágeis e precisos para apoiar decisões estratégicas de alto impacto.</p>
-    <p>Acredito que um bom dashboard não é apenas uma planilha bonita, mas sim uma ferramenta de visão e poder de decisão.</p>
+    <p>Acredito que um bom dashboard não é apenas uma planilha bonita: é uma ferramenta de visão e poder de decisão.</p>
     <p>Seja na organização de dados complexos ou na criação de insights visuais, meu trabalho está focado em simplificar a análise e potencializar resultados.</p>
   </header>
-  <main>
+
+  <!-- Portfólio -->
+  <main id="portfolio">
     <section class="cards">
-      <div class="card">
-        <img src="Slide2.PNG" alt="Slide2">
-      </div>
-      <div class="card">
-        <img src="Slide3.PNG" alt="Slide3">
-      </div>
-      <div class="card">
-        <img src="Slide4.PNG" alt="Slide4">
-      </div>
-      <div class="card">
-        <img src="Slide5.PNG" alt="Slide5">
-      </div>
-      <div class="card">
-        <img src="Slide6.PNG" alt="Slide6">
-      </div>
-      <div class="card">
-        <img src="Slide7.PNG" alt="Slide7">
-      </div>
-      <div class="card">
-        <img src="Slide8.PNG" alt="Slide8">
-      </div>
-      <div class="card">
-        <img src="Slide9.PNG" alt="Slide9">
-      </div>
-      <div class="card">
-        <img src="Slide10.PNG" alt="Slide10">
-      </div>
-      <div class="card">
-        <img src="Slide11.PNG" alt="Slide11">
-      </div>
-      <div class="card">
-        <img src="Slide12.PNG" alt="Slide12">
-      </div>
+      <div class="card"><img src="Slide2.PNG" alt="Slide2"></div>
+      <div class="card"><img src="Slide3.PNG" alt="Slide3"></div>
+      <div class="card"><img src="Slide4.PNG" alt="Slide4"></div>
+      <div class="card"><img src="Slide5.PNG" alt="Slide5"></div>
+      <div class="card"><img src="Slide6.PNG" alt="Slide6"></div>
+      <div class="card"><img src="Slide7.PNG" alt="Slide7"></div>
+      <div class="card"><img src="Slide8.PNG" alt="Slide8"></div>
+      <div class="card"><img src="Slide9.PNG" alt="Slide9"></div>
+      <div class="card"><img src="Slide10.PNG" alt="Slide10"></div>
+      <div class="card"><img src="Slide11.PNG" alt="Slide11"></div>
+      <div class="card"><img src="Slide12.PNG" alt="Slide12"></div>
     </section>
   </main>
-  <footer>
+
+  <!-- Contato -->
+  <footer id="contato">
     © 2025 - Fernanda Moura |
     <a href="https://www.linkedin.com/in/fernandamouracoelho" target="_blank">LinkedIn</a>
     <br>
@@ -163,4 +216,5 @@
   </footer>
 </body>
 </html>
+
 
